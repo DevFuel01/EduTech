@@ -1,0 +1,312 @@
+/* Page Load Animation */
+body {
+    transform: translateY(-200px);
+    animation: dropIn 1.5s ease-out forwards;
+}
+
+@keyframes dropIn {
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgb(7, 7, 67);
+    color: white;
+    padding: 1rem;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a i {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+/* Hero Section */
+.hero {
+    background: url('img/3.png') no-repeat center center/cover;
+    padding: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+
+.hero h1 {
+    margin-top: 70px;
+    font-size: 3rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.hero-button button {
+    background-color: rgb(7, 7, 67);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.hero-button button:hover {
+    background-color: #0056b3;
+}
+
+/* Courses Section */
+.courses {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.course-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.course-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 20px;
+    max-width: 30%;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.course-item i {
+    font-size: 3rem;
+    color: rgb(7, 7, 67);
+    margin-bottom: 1rem;
+}
+
+.course-item button {
+    background-color: rgb(7, 7, 67);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.course-item button:hover {
+    background-color: #0056b3;
+}
+
+/* Testimonials */
+.testimonials {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.testimonial-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.testimonial-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Partners */
+.partners {
+    padding: 2rem;
+    text-align: center;
+}
+
+.partner-logos {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.partner-logos img {
+    height: 80px;
+}
+
+/* Why Choose Us */
+.why-choose-us {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.reasons-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.reason-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reason-item i {
+    font-size: 3rem;
+    color: rgb(7, 7, 67);
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.footer-links a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: rgb(145, 145, 178);
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: rgb(7, 7, 67);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero {
+        padding: 90px;
+    }
+
+    .course-item {
+        max-width: 90%;
+    }
+
+    .testimonial-item {
+        width: 100%;
+    }
+
+    .reason-item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        padding: 60px;
+    }
+
+    .hero-button button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}

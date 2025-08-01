@@ -1,0 +1,278 @@
+/* General Styling for About Us Page */
+body {
+    transform: translateX(-100%);
+    animation: waveIn 1.5s ease-out forwards;
+}
+
+@keyframes waveIn {
+    0% {
+        transform: translateX(-100%) rotate(-10deg);
+    }
+    50% {
+        transform: translateX(-20%) rotate(5deg);
+    }
+    100% {
+        transform: translateX(0) rotate(0deg);
+    }
+}
+
+/* Reset and Navbar (from landing page) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: rgb(7, 7, 67);
+    color: white;
+    padding: 1rem;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a i {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* About Us Hero Section */
+.about-hero {
+    background: url('img/about.png') no-repeat center center/cover;
+    padding: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+
+.about-hero h1 {
+    font-size: 3rem;
+}
+
+.about-hero p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+/* Our Story Section */
+.our-story {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.our-story h2 {
+    font-size: 2rem;
+    color: rgb(7, 7, 67);
+}
+
+.our-story p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+/* Mission & Vision Section */
+.mission-vision {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.mission, .vision {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 45%;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mission h2, .vision h2 {
+    color: rgb(7, 7, 67);
+}
+
+.mission p, .vision p {
+    font-size: 1rem;
+}
+
+/* Meet the Team Section */
+.team {
+    padding: 2rem;
+    text-align: center;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    width: 250px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 50%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: rgb(7, 7, 67);
+}
+
+.team-member p {
+    font-size: 1rem;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.reasons-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.reason-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reason-item i {
+    font-size: 3rem;
+    color: rgb(7, 7, 67);
+    margin-bottom: 1rem;
+}
+
+.reason-item h3 {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.reason-item p {
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .about-hero {
+        padding: 100px;
+    }
+
+    .about-hero h1 {
+        font-size: 2rem;
+    }
+
+    .about-hero p {
+        font-size: 1.2rem;
+    }
+
+    .mission, .vision, .reason-item {
+        width: 100%;
+        margin: 0.5rem;
+    }
+
+    .team-member {
+        width: 100%;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: rgb(7, 7, 67);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
